@@ -736,6 +736,230 @@ for(Integer key : map.keySet()) {
 * Key → unique
 
 ---
+Perfect 👍 we’ll **go deep only on Collection Interview Q&A** (important + tricky + short for revision)
+
+---
+
+# #### 🔥 Collection Interview Questions (Must Prepare)
+
+---
+
+#### ✅ Q1: What is Collection Framework?
+
+👉 Set of classes & interfaces to store and manipulate group of objects
+
+---
+
+#### ✅ Q2: Difference between Collection and Collections?
+
+👉 Collection → interface
+👉 Collections → utility class (sorting, searching)
+
+---
+
+#### ✅ Q3: Difference between List and Set?
+
+👉 List → duplicate allowed, ordered
+👉 Set → no duplicate, no index
+
+---
+
+#### ✅ Q4: Difference between ArrayList and LinkedList?
+
+👉 ArrayList → fast read, slow insert
+👉 LinkedList → fast insert, slow read
+
+---
+
+#### ✅ Q5: Difference between HashSet and LinkedHashSet?
+
+👉 HashSet → no order
+👉 LinkedHashSet → insertion order
+
+---
+
+#### ✅ Q6: Difference between HashSet and TreeSet?
+
+👉 HashSet → fast, no order
+👉 TreeSet → sorted, slower
+
+---
+
+#### ✅ Q7: Difference between HashMap and TreeMap?
+
+👉 HashMap → no order, fast
+👉 TreeMap → sorted, slower
+
+---
+
+#### ✅ Q8: Difference between HashMap and Hashtable?
+
+👉 HashMap → not thread-safe, allows null
+👉 Hashtable → thread-safe, no null
+
+---
+
+#### ✅ Q9: Can HashMap have null?
+
+👉 ✅ 1 null key
+👉 ✅ multiple null values
+
+---
+
+#### ✅ Q10: Can TreeMap have null key?
+
+👉 ❌ No (throws NullPointerException)
+
+---
+
+#### ✅ Q11: How HashMap works internally?
+
+👉 key.hashCode() → bucket index
+👉 collision → linked list / tree
+👉 equals() → check key
+
+---
+
+#### ✅ Q12: What is collision?
+
+👉 Multiple keys mapped to same bucket
+
+---
+
+#### ✅ Q13: How to handle collision?
+
+👉 Using **linked list / tree (Java 8+)**
+
+---
+
+#### ✅ Q14: What is load factor?
+
+👉 Capacity usage threshold (default = 0.75)
+
+👉 When exceeded → resize
+
+---
+
+#### ✅ Q15: What is rehashing?
+
+👉 Increase bucket size & redistribute entries
+
+---
+
+#### ✅ Q16: Difference between Iterator and ListIterator?
+
+👉 Iterator → forward only
+👉 ListIterator → forward + backward (List only)
+
+---
+
+#### ✅ Q17: Fail-fast vs Fail-safe?
+
+👉 Fail-fast → throws exception if modified
+👉 Fail-safe → works on copy
+
+---
+
+#### ✅ Q18: Difference between ArrayList and Vector?
+
+👉 ArrayList → not thread-safe
+👉 Vector → thread-safe (slow)
+
+---
+
+#### ✅ Q19: Why Set doesn’t allow duplicates?
+
+👉 Uses `hashCode()` + `equals()` to check uniqueness
+
+---
+
+#### ✅ Q20: Why equals() and hashCode() important?
+
+👉 To identify **same object in HashMap/HashSet**
+
+---
+
+#### ✅ Q21: What happens if hashCode same but equals different?
+
+👉 Goes to same bucket but stored separately
+
+---
+
+#### ✅ Q22: Difference between keySet() and entrySet()?
+
+👉 keySet() → only keys
+👉 entrySet() → key + value (faster iteration)
+
+---
+
+#### ✅ Q23: Which is faster for iteration in Map?
+
+👉 entrySet() (no extra lookup)
+
+---
+
+#### ✅ Q24: What is Comparable?
+
+👉 Natural sorting
+👉 `compareTo()` inside class
+
+---
+
+#### ✅ Q25: What is Comparator?
+
+👉 Custom sorting
+👉 `compare()` outside class
+
+---
+
+# #### 🔥 Important Scenario Questions
+
+---
+
+#### ✅ Q26: Why ArrayList not thread-safe?
+
+👉 Multiple threads can modify simultaneously → inconsistent data
+
+---
+
+#### ✅ Q27: Which collection is thread-safe?
+
+👉 Vector, Hashtable, Collections.synchronizedList()
+
+---
+
+#### ✅ Q28: When to use TreeSet?
+
+👉 When need **sorted + unique data**
+
+---
+
+#### ✅ Q29: When to use LinkedHashMap?
+
+👉 When need **insertion order + fast lookup**
+
+---
+
+#### ✅ Q30: Why HashMap is not synchronized?
+
+👉 To improve performance
+
+---
+
+# #### ⚡ Ultra Quick Revision
+
+* List → ordered, duplicate
+* Set → unique
+* Map → key-value
+* HashMap → fast
+* TreeMap → sorted
+* LinkedHashMap → ordered
+* equals + hashCode → important
+
+---
+
+👉 Next step (as you said):
+**Exception Interview Questions (deep + tricky 🔥)**
 
 
 
