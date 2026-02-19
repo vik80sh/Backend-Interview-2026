@@ -736,7 +736,129 @@ for(Integer key : map.keySet()) {
 * Key → unique
 
 ---
-Perfect 👍 we’ll **go deep only on Collection Interview Q&A** (important + tricky + short for revision)
+Good 👍 this is **Java 8 Stream API (very important interview question 🔥)**
+
+I’ll keep it **short + clear + example**
+
+---
+
+# #### 🔹 map() vs flatMap()
+
+---
+
+# #### 🔹 map()
+
+👉 **Transforms each element into another element**
+
+👉 **1 input → 1 output**
+
+---
+
+### 📌 Example
+
+```java
+List<String> list = Arrays.asList("a", "b", "c");
+
+list.stream()
+    .map(s -> s.toUpperCase())
+    .forEach(System.out::println);
+```
+
+👉 Output:
+
+```
+A
+B
+C
+```
+
+---
+
+### 📌 Use Case
+
+👉 When each element produces **single value**
+
+---
+
+# #### 🔹 flatMap()
+
+👉 **Transforms each element into multiple elements and flattens it**
+
+👉 **1 input → many output**
+
+---
+
+### 📌 Example
+
+```java
+List<List<Integer>> list = Arrays.asList(
+    Arrays.asList(1,2),
+    Arrays.asList(3,4)
+);
+
+list.stream()
+    .flatMap(x -> x.stream())
+    .forEach(System.out::println);
+```
+
+👉 Output:
+
+```
+1
+2
+3
+4
+```
+
+---
+
+### 📌 Use Case
+
+👉 When data is **nested (List of List)**
+
+---
+
+# #### 🔥 Difference
+
+| Feature   | map()     | flatMap()         |
+| --------- | --------- | ----------------- |
+| Output    | 1 element | multiple elements |
+| Structure | Same      | Flatten           |
+| Return    | Stream<T> | Stream<T>         |
+
+---
+
+# #### 🔥 Simple Understanding
+
+👉 map → **convert**
+👉 flatMap → **convert + flatten**
+
+---
+
+# #### ⚡ Interview One-Liner
+
+* map → one-to-one mapping
+* flatMap → one-to-many mapping + flatten
+
+---
+
+# #### 🔥 Real Example
+
+👉 map:
+
+```
+["a","b"] → ["A","B"]
+```
+
+👉 flatMap:
+
+```
+[[1,2],[3,4]] → [1,2,3,4]
+```
+
+---
+
+
 
 ---
 
